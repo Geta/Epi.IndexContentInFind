@@ -8,7 +8,7 @@
         <owners>Geta</owners>
         <projectUrl>https://github.com/Geta/Epi.IndexContentInFind</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Tool to index content items for Episerver. Makes it possible to index a single item or an item including it's descendents.</description>
+        <description>Tool to index content items for Episerver. Makes it possible to index a single content item or an item including it's descendents.</description>
         <releaseNotes></releaseNotes>
         <copyright></copyright>
         <tags>Episerver, Geta</tags>
