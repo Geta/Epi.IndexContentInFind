@@ -12,7 +12,7 @@
             name: "IndexContentInFindRecursiveCommand",
             label: resources.label,
             tooltip: resources.tooltip,
-            recursive: true,
+            includeDescendants: true,
             resources: resources
         });
     });

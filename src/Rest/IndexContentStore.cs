@@ -29,13 +29,13 @@ namespace Geta.Epi.IndexContentInFind.Rest
 
             IEnumerable<ContentIndexingResult> indexingResults;
 
-            if (data.Recursive)
+            if (data.IncludeDescendants)
             {
-                indexingResults = IndexService.IndexRecursive(data.ContentLink);
+                indexingResults = IndexService.IndexRecursive(data.ContentLink, data.Force);
             }
             else
             {
-                indexingResults = IndexService.Index(data.ContentLink);
+                indexingResults = IndexService.Index(data.ContentLink, data.Force);
             }
 
             return Rest(indexingResults);
@@ -45,6 +45,7 @@ namespace Geta.Epi.IndexContentInFind.Rest
     public class IndexInFindData
     {
         public ContentReference ContentLink { get; set; }
-        public bool Recursive { get; set; }
+        public bool IncludeDescendants { get; set; }
+        public bool Force { get; set; }
     }
 }

@@ -23,13 +23,13 @@ namespace Geta.Epi.IndexContentInFind
             ContentIndexer = contentIndexer;
         }
 
-        public virtual IEnumerable<ContentIndexingResult> Index(ContentReference contentLink)
+        public virtual IEnumerable<ContentIndexingResult> Index(ContentReference contentLink, bool ignoreConventions)
         {
             var content = ContentLoader.Get<IContent>(contentLink);
-            return ContentIndexer.Index(content);
+            return ContentIndexer.Index(content, GetIndexOptions(ignoreConventions));
         }
 
-        public virtual IEnumerable<ContentIndexingResult> IndexRecursive(ContentReference contentLink)
+        public virtual IEnumerable<ContentIndexingResult> IndexRecursive(ContentReference contentLink, bool ignoreConventions)
         {
             var mainContent = ContentLoader.Get<IContent>(contentLink);
             var contentReferencesToIndex = ContentLoader.GetDescendents(contentLink);
@@ -38,7 +38,19 @@ namespace Geta.Epi.IndexContentInFind
             // Add main content to list
             contentsToIndex.Insert(0, mainContent);
 
-            return ContentIndexer.Index(contentsToIndex);
+            return ContentIndexer.Index(contentsToIndex, GetIndexOptions(ignoreConventions));
+        }
+
+        protected virtual IndexOptions GetIndexOptions(bool ignoreConventions)
+        {
+            IndexOptions indexOptions = null;
+
+            if (ignoreConventions)
+            {
+                indexOptions = new IndexOptions { FilterContent = false };
+            }
+
+            return indexOptions;
         }
     }
 }

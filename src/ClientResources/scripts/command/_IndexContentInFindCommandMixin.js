@@ -20,7 +20,8 @@
     ) {
         return declare("geta-epi-indexcontentinfind/command/_IndexContentInFindCommandMixin", [_Command], {
             canExecute: true,
-            recursive: false,
+            includeDescendants: false,
+            force: false,
             resources: null,
 
             _execute: function () {
@@ -29,7 +30,7 @@
                 var contentData = this.model.contentData;
 
                 var dialogContent = new IndexContentInFindInfo({
-                    recursive: this.recursive
+                    recursive: this.includeDescendants
                 });
 
                 dialogContent.startup();
@@ -53,12 +54,13 @@
 
                 store.put({
                     'contentLink': contentData.contentLink,
-                    'recursive': this.recursive
+                    'includeDescendants': this.includeDescendants,
+                    'force': this.force
                 }).then(lang.hitch(this, function (response) {
                     dialog.hide();
 
                     dialogContent = new IndexContentInFindInfo({
-                        recursive: this.recursive
+                        recursive: this.includeDescendants
                     });
 
                     dialogContent.startup();

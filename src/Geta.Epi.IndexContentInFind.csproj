@@ -229,6 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientResources\scripts\CommandsInitializer.js" />
+    <Content Include="ClientResources\scripts\command\IndexContentInFindForceCommand.js" />
     <Content Include="ClientResources\scripts\command\_IndexContentInFindCommandMixin.js" />
     <Content Include="ClientResources\scripts\command\IndexContentInFindRecursiveCommand.js" />
     <Content Include="ClientResources\scripts\command\IndexContentInFindCommand.js" />

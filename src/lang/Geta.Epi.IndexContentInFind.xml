@@ -8,9 +8,13 @@
                         <label>Index in Find</label>
                         <tooltip>Indexes only this content</tooltip>
                     </indexcontentinfindcommand>
+                    <indexcontentinfindforcecommand>
+                        <label>Index in Find (ignore conventions)</label>
+                        <tooltip>Indexes only this content. Ignores conventions.</tooltip>
+                    </indexcontentinfindforcecommand>
                     <indexcontentinfindrecursivecommand>
-                        <label>Index in Find (recursive)</label>
-                        <tooltip>Indexes this content and all of it's descendents in Find</tooltip>
+                        <label>Index in Find (incl. descendants)</label>
+                        <tooltip>Indexes this content and all of it's descendants in Find</tooltip>
                     </indexcontentinfindrecursivecommand>
                     <indexcontentinfindinfo>
                         <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
@@ -29,9 +33,13 @@
                         <label>Indexera i Find</label>
                         <tooltip>Indexerar endast detta innehåll</tooltip>
                     </indexcontentinfindcommand>
+                    <indexcontentinfindforcecommand>
+                        <label>Indexera i Find (ignorera konventioner)</label>
+                        <tooltip>Indexerar endast detta innehåll. Ignorerar definierade konventioner.</tooltip>
+                    </indexcontentinfindforcecommand>
                     <indexcontentinfindrecursivecommand>
-                        <label>Indexera rekursivt i Find</label>
-                        <tooltip>Indexerar detta och allt härstammande innehåll</tooltip>
+                        <label>Indexera i Find (inkl. ättlingar)</label>
+                        <tooltip>Indexerar detta innehåll och alla ättlingar</tooltip>
                     </indexcontentinfindrecursivecommand>
                     <indexcontentinfindinfo>
                         <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
@@ -48,11 +56,15 @@
                 <indexcontentinfind>
                     <indexcontentinfindcommand>
                         <label>Indeksere i Find</label>
-                        <tooltip>Indekserer kun dette innhold</tooltip>
+                        <tooltip>Indeksere kun dette innhold</tooltip>
                     </indexcontentinfindcommand>
+                    <indexcontentinfindforcecommand>
+                        <label>Indeksere i Find (ignorere konvensjoner)</label>
+                        <tooltip>Indeksere kun dette innhold. Ignorerer konvensjoner.</tooltip>
+                    </indexcontentinfindforcecommand>
                     <indexcontentinfindrecursivecommand>
-                        <label>Indeksere rekursivt i Find</label>
-                        <tooltip>Indekserer dette og all avledet innhold</tooltip>
+                        <label>Indeksere i Find (inkl. descendants)</label>
+                        <tooltip>Indeksere dette og all avledet innhold</tooltip>
                     </indexcontentinfindrecursivecommand>
                     <indexcontentinfindinfo>
                         <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
