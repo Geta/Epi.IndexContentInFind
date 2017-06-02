@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+    <language name="English" id="en">
+        <geta>
+            <epi>
+                <indexcontentinfind>
+                    <indexcontentinfindcommand>
+                        <label>Index in Find</label>
+                        <tooltip>Indexes only this content</tooltip>
+                    </indexcontentinfindcommand>
+                    <indexcontentinfindrecursivecommand>
+                        <label>Index recursive in Find</label>
+                        <tooltip>Indexes this content and all of it's descendents in Find</tooltip>
+                    </indexcontentinfindrecursivecommand>
+                    <indexcontentinfindinfo>
+                        <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
+                        <recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
+                        <resulttext>{0} items was indexed.</resulttext>
+                    </indexcontentinfindinfo>
+                </indexcontentinfind>
+            </epi>
+        </geta>
+    </language>
+    <language name="Swedish" id="sv">
+        <geta>
+            <epi>
+                <indexcontentinfind>
+                    <indexcontentinfindcommand>
+                        <label>Indexera i Find</label>
+                        <tooltip>Indexerar endast detta innehåll</tooltip>
+                    </indexcontentinfindcommand>
+                    <indexcontentinfindrecursivecommand>
+                        <label>Indexera rekursivt i Find</label>
+                        <tooltip>Indexerar detta och allt härstammande innehåll</tooltip>
+                    </indexcontentinfindrecursivecommand>
+                    <indexcontentinfindinfo>
+                        <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
+                        <recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
+                        <resulttext>{0} objekt indexerades.</resulttext>
+                    </indexcontentinfindinfo>
+                </indexcontentinfind>
+            </epi>
+        </geta>
+    </language>
+    <language name="Norwegian" id="no">
+        <geta>
+            <epi>
+                <indexcontentinfind>
+                    <indexcontentinfindcommand>
+                        <label>Indeksere i Find</label>
+                        <tooltip>Indekserer kun dette innhold</tooltip>
+                    </indexcontentinfindcommand>
+                    <indexcontentinfindrecursivecommand>
+                        <label>Indeksere rekursivt i Find</label>
+                        <tooltip>Indekserer dette og all avledet innhold</tooltip>
+                    </indexcontentinfindrecursivecommand>
+                    <indexcontentinfindinfo>
+                        <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
+                        <recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
+                        <resulttext>{0} objekt indekserte.</resulttext>
+                    </indexcontentinfindinfo>
+                </indexcontentinfind>
+            </epi>
+        </geta>
+    </language>
+</languages>
