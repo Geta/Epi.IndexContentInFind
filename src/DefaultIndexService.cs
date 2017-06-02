@@ -12,33 +12,33 @@ namespace Geta.Epi.IndexContentInFind
     [ServiceConfiguration(typeof(IIndexService), Lifecycle = ServiceInstanceScope.Hybrid)]
     public class DefaultIndexService : IIndexService
     {
-        private readonly IContentLoader _contentLoader;
-        private readonly IContentIndexer _contentIndexer;
+        protected readonly IContentLoader ContentLoader;
+        protected readonly IContentIndexer ContentIndexer;
 
         public DefaultIndexService(IContentLoader contentLoader, IContentIndexer contentIndexer)
         {
             if (contentLoader == null) throw new ArgumentNullException(nameof(contentLoader));
             if (contentIndexer == null) throw new ArgumentNullException(nameof(contentIndexer));
-            _contentLoader = contentLoader;
-            _contentIndexer = contentIndexer;
+            ContentLoader = contentLoader;
+            ContentIndexer = contentIndexer;
         }
 
-        public IEnumerable<ContentIndexingResult> Index(ContentReference contentLink)
+        public virtual IEnumerable<ContentIndexingResult> Index(ContentReference contentLink)
         {
-            var content = _contentLoader.Get<IContent>(contentLink);
-            return _contentIndexer.Index(content);
+            var content = ContentLoader.Get<IContent>(contentLink);
+            return ContentIndexer.Index(content);
         }
 
-        public IEnumerable<ContentIndexingResult> IndexRecursive(ContentReference contentLink)
+        public virtual IEnumerable<ContentIndexingResult> IndexRecursive(ContentReference contentLink)
         {
-            var mainContent = _contentLoader.Get<IContent>(contentLink);
-            var contentReferencesToIndex = _contentLoader.GetDescendents(contentLink);
-            var contentsToIndex = _contentLoader.GetItems(contentReferencesToIndex, CultureInfo.InvariantCulture).ToList();
+            var mainContent = ContentLoader.Get<IContent>(contentLink);
+            var contentReferencesToIndex = ContentLoader.GetDescendents(contentLink);
+            var contentsToIndex = ContentLoader.GetItems(contentReferencesToIndex, CultureInfo.InvariantCulture).ToList();
 
             // Add main content to list
             contentsToIndex.Insert(0, mainContent);
 
-            return _contentIndexer.Index(contentsToIndex);
+            return ContentIndexer.Index(contentsToIndex);
         }
     }
 }
