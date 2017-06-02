@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>Geta.Epi.IndexContentInFind</id>
+        <version>$version$</version>
+        <title>Geta.Epi.IndexContentInFind</title>
+        <authors>Geta</authors>
+        <owners>Geta</owners>
+        <projectUrl>https://github.com/Geta/Epi.IndexContentInFind</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Tool to index content items for Episerver. Makes it possible to index a single item or an item including it's descendents.</description>
+        <releaseNotes></releaseNotes>
+        <copyright></copyright>
+        <tags>Episerver, Geta</tags>
+        <dependencies>
+            <dependency id="EPiServer.Framework" version="10.0.1" />
+            <dependency id="EPiServer.CMS.Core" version="10.0.1" />
+            <dependency id="EPiServer.CMS.UI.Core" version="10.0.2" />
+            <dependency id="EPiServer.Find.Cms" version="12.2.5" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Geta.Epi.IndexContentInFind.dll" target="lib" />
+        <file src="bin\geta-epi-indexcontentinfind.zip" target="content\modules\_protected\geta-epi-indexcontentinfind" />
+        <file src="lang\*.*" target="content\lang" />
+    </files>
+</package>
