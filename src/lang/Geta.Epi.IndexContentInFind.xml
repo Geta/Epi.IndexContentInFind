@@ -9,7 +9,7 @@
                         <tooltip>Indexes only this content</tooltip>
                     </indexcontentinfindcommand>
                     <indexcontentinfindrecursivecommand>
-                        <label>Index recursive in Find</label>
+                        <label>Index in Find (recursive)</label>
                         <tooltip>Indexes this content and all of it's descendents in Find</tooltip>
                     </indexcontentinfindrecursivecommand>
                     <indexcontentinfindinfo>

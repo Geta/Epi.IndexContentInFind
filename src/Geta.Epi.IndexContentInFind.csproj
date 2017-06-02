@@ -238,6 +238,7 @@
     <Content Include="packages.config" />
     <Content Include="module.config" />
     <Content Include="lang\Geta.Epi.IndexContentInFind.xml" />
+    <Content Include="Geta.Epi.IndexContentInFind.nuspec" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
