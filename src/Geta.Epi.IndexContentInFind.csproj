@@ -230,8 +230,9 @@
   <ItemGroup>
     <Content Include="ClientResources\scripts\CommandsInitializer.js" />
     <Content Include="ClientResources\scripts\command\IndexContentInFindForceCommand.js" />
+    <Content Include="ClientResources\scripts\command\IndexContentInFindDescendantsForceCommand.js" />
     <Content Include="ClientResources\scripts\command\_IndexContentInFindCommandMixin.js" />
-    <Content Include="ClientResources\scripts\command\IndexContentInFindRecursiveCommand.js" />
+    <Content Include="ClientResources\scripts\command\IndexContentInFindDescendantsCommand.js" />
     <Content Include="ClientResources\scripts\command\IndexContentInFindCommand.js" />
     <Content Include="ClientResources\scripts\command\ToolsMenuCommandProvider.js" />
     <Content Include="ClientResources\scripts\widget\IndexContentInFindInfo.js" />

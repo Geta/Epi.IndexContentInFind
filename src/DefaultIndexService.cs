@@ -29,7 +29,7 @@ namespace Geta.Epi.IndexContentInFind
             return ContentIndexer.Index(content, GetIndexOptions(ignoreConventions));
         }
 
-        public virtual IEnumerable<ContentIndexingResult> IndexRecursive(ContentReference contentLink, bool ignoreConventions)
+        public virtual IEnumerable<ContentIndexingResult> IndexFrom(ContentReference contentLink, bool ignoreConventions)
         {
             var mainContent = ContentLoader.Get<IContent>(contentLink);
             var contentReferencesToIndex = ContentLoader.GetDescendents(contentLink);

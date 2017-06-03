@@ -12,10 +12,14 @@
                         <label>Index in Find (ignore conventions)</label>
                         <tooltip>Indexes only this content. Ignores conventions.</tooltip>
                     </indexcontentinfindforcecommand>
-                    <indexcontentinfindrecursivecommand>
-                        <label>Index in Find (incl. descendants)</label>
+                    <indexcontentinfinddescendantscommand>
+                        <label>Index in Find (include descendants)</label>
                         <tooltip>Indexes this content and all of it's descendants in Find</tooltip>
-                    </indexcontentinfindrecursivecommand>
+                    </indexcontentinfinddescendantscommand>
+                    <indexcontentinfinddescendantsforcecommand>
+                        <label>Index in Find (include descendants &amp; ignore conventions)</label>
+                        <tooltip>Indexes this content and all of it's descendants in Find. Ignores conventions.</tooltip>
+                    </indexcontentinfinddescendantsforcecommand>
                     <indexcontentinfindinfo>
                         <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
                         <recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
@@ -35,12 +39,16 @@
                     </indexcontentinfindcommand>
                     <indexcontentinfindforcecommand>
                         <label>Indexera i Find (ignorera konventioner)</label>
-                        <tooltip>Indexerar endast detta innehåll. Ignorerar definierade konventioner.</tooltip>
+                        <tooltip>Indexerar endast detta innehåll. Ignorerar konventioner.</tooltip>
                     </indexcontentinfindforcecommand>
-                    <indexcontentinfindrecursivecommand>
-                        <label>Indexera i Find (inkl. ättlingar)</label>
+                    <indexcontentinfinddescendantscommand>
+                        <label>Indexera i Find (inkludera ättlingar)</label>
                         <tooltip>Indexerar detta innehåll och alla ättlingar</tooltip>
-                    </indexcontentinfindrecursivecommand>
+                    </indexcontentinfinddescendantscommand>
+                    <indexcontentinfinddescendantsforcecommand>
+                        <label>Indexera i Find (inkludera ättlingar, ignorera konventioner)</label>
+                        <tooltip>Indexerar detta innehåll och alla ättlingar. Ignorerar konventioner.</tooltip>
+                    </indexcontentinfinddescendantsforcecommand>
                     <indexcontentinfindinfo>
                         <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
                         <recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
@@ -62,10 +70,14 @@
                         <label>Indeksere i Find (ignorere konvensjoner)</label>
                         <tooltip>Indeksere kun dette innhold. Ignorerer konvensjoner.</tooltip>
                     </indexcontentinfindforcecommand>
-                    <indexcontentinfindrecursivecommand>
-                        <label>Indeksere i Find (inkl. descendants)</label>
+                    <indexcontentinfinddescendantscommand>
+                        <label>Indeksere i Find (inkludere descendants)</label>
                         <tooltip>Indeksere dette og all avledet innhold</tooltip>
-                    </indexcontentinfindrecursivecommand>
+                    </indexcontentinfinddescendantscommand>
+                    <indexcontentinfinddescendantsforcecommand>
+                        <label>Indeksere i Find (inkludere descendants, ignorere konvensjoner)</label>
+                        <tooltip>Indexerar detta innehåll och alla ättlingar. Ignorerer konvensjoner.</tooltip>
+                    </indexcontentinfinddescendantsforcecommand>
                     <indexcontentinfindinfo>
                         <text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
                         <recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>

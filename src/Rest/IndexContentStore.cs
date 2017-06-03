@@ -31,7 +31,7 @@ namespace Geta.Epi.IndexContentInFind.Rest
 
             if (data.IncludeDescendants)
             {
-                indexingResults = IndexService.IndexRecursive(data.ContentLink, data.Force);
+                indexingResults = IndexService.IndexFrom(data.ContentLink, data.Force);
             }
             else
             {

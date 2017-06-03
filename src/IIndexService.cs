@@ -7,6 +7,6 @@ namespace Geta.Epi.IndexContentInFind
     public interface IIndexService
     {
         IEnumerable<ContentIndexingResult> Index(ContentReference contentLink, bool ignoreConventions);
-        IEnumerable<ContentIndexingResult> IndexRecursive(ContentReference contentLink, bool ignoreConventions);
+        IEnumerable<ContentIndexingResult> IndexFrom(ContentReference contentLink, bool ignoreConventions);
     }
 }
