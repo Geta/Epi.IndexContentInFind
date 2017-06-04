@@ -228,17 +228,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientResources\scripts\CommandsInitializer.js" />
-    <Content Include="ClientResources\scripts\command\IndexContentInFindForceCommand.js" />
-    <Content Include="ClientResources\scripts\command\IndexContentInFindDescendantsForceCommand.js" />
-    <Content Include="ClientResources\scripts\command\_IndexContentInFindCommandMixin.js" />
-    <Content Include="ClientResources\scripts\command\IndexContentInFindDescendantsCommand.js" />
-    <Content Include="ClientResources\scripts\command\IndexContentInFindCommand.js" />
-    <Content Include="ClientResources\scripts\command\ToolsMenuCommandProvider.js" />
-    <Content Include="ClientResources\scripts\widget\IndexContentInFindInfo.js" />
-    <Content Include="ClientResources\scripts\widget\templates\IndexContentInFindInfo.html" />
+    <None Include="ClientResources\scripts\CommandsInitializer.js" />
+    <None Include="ClientResources\scripts\command\IndexContentInFindForceCommand.js" />
+    <None Include="ClientResources\scripts\command\IndexContentInFindDescendantsForceCommand.js" />
+    <None Include="ClientResources\scripts\command\_IndexContentInFindCommandMixin.js" />
+    <None Include="ClientResources\scripts\command\IndexContentInFindDescendantsCommand.js" />
+    <None Include="ClientResources\scripts\command\IndexContentInFindCommand.js" />
+    <None Include="ClientResources\scripts\command\ToolsMenuCommandProvider.js" />
+    <None Include="ClientResources\scripts\widget\IndexContentInFindInfo.js" />
+    <None Include="ClientResources\scripts\widget\templates\IndexContentInFindInfo.html" />
     <Content Include="packages.config" />
-    <Content Include="module.config" />
+    <None Include="module.config" />
     <Content Include="lang\Geta.Epi.IndexContentInFind.xml" />
     <Content Include="Geta.Epi.IndexContentInFind.nuspec" />
     <None Include="Web.Debug.config">
@@ -249,7 +249,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IIndexService.cs" />
