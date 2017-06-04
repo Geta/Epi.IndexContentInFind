@@ -15,7 +15,7 @@ namespace Geta.Epi.IndexContentInFind.Rest
 
         public IndexContentStore(IIndexService indexService)
         {
-            if (indexService == null) throw new ArgumentNullException(nameof(indexService));
+            if (indexService == null) throw new ArgumentNullException("indexService");
             IndexService = indexService;
         }
 
