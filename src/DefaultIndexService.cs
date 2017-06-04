@@ -18,7 +18,7 @@ namespace Geta.Epi.IndexContentInFind
         public DefaultIndexService(IContentLoader contentLoader, IContentIndexer contentIndexer)
         {
             if (contentLoader == null) throw new ArgumentNullException("contentLoader");
-            if (contentIndexer == null) throw new ArgumentNullException("contentLoader");
+            if (contentIndexer == null) throw new ArgumentNullException("contentIndexer");
             ContentLoader = contentLoader;
             ContentIndexer = contentIndexer;
         }
