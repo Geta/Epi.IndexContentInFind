@@ -1,6 +1,7 @@
 ﻿define([
     "dojo/_base/declare",
     "dojo/_base/lang",
+    "dojo/_base/array",
     "dijit/layout/_LayoutWidget",
     "dijit/_TemplatedMixin",
     "epi/i18n!epi/cms/nls/geta.epi.indexcontentinfind.indexcontentinfindinfo",
@@ -9,6 +10,7 @@
     function (
         declare,
         lang,
+        array,
         _LayoutWidget,
         _TemplatedMixin,
         resources,
@@ -30,7 +32,29 @@
             },
 
             showResult: function (indexingResult) {
-                this.set('text', resources.resulttext.replace('{0}', indexingResult.length));
+                var successfulCount = 0,
+                    excludedCount = 0,
+                    errorCount = 0;
+
+                array.forEach(indexingResult, function (item) {
+                    if (item.ok) {
+                        successfulCount++;
+                    }
+                    else if (item.excludedByConventions === false) {
+                        errorCount++;
+                    }
+
+                    if (item.excludedByConventions) {
+                        excludedCount++;
+                    }
+                }, this);
+
+                var resultText = resources.resulttext;
+                resultText = resultText.replace('{0}', successfulCount);
+                resultText = resultText.replace('{1}', excludedCount);
+                resultText = resultText.replace('{2}', errorCount);
+
+                this.set('text', resultText);
             },
 
             _setTextAttr: function(text) {
