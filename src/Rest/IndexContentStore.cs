@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Web.Mvc;
 using EPiServer.Core;
-using EPiServer.Find.Cms;
 using EPiServer.Shell.Services.Rest;
 
 namespace Geta.Epi.IndexContentInFind.Rest
@@ -11,38 +9,30 @@ namespace Geta.Epi.IndexContentInFind.Rest
     [RestStore("indexcontentstore")]
     public class IndexContentStore : RestControllerBase
     {
-        protected readonly IIndexService IndexService;
+        private readonly IIndexService _indexService;
 
         public IndexContentStore(IIndexService indexService)
         {
-            if (indexService == null) throw new ArgumentNullException("indexService");
-            IndexService = indexService;
+            _indexService = indexService ?? throw new ArgumentNullException(nameof(indexService));
         }
 
         [HttpPost]
-        public virtual ActionResult Post(IndexInFindData data)
+        public virtual ActionResult Post(IndexInFindRequest data)
         {
             if (data == null || ContentReference.IsNullOrEmpty(data.ContentLink))
             {
-                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, "ContentLink cannot be null.");
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "ContentLink cannot be null.");
             }
 
-            IEnumerable<ContentIndexingResult> indexingResults;
-
-            if (data.IncludeDescendants)
-            {
-                indexingResults = IndexService.IndexFrom(data.ContentLink, data.Force);
-            }
-            else
-            {
-                indexingResults = IndexService.Index(data.ContentLink, data.Force);
-            }
+            var indexingResults = data.IncludeDescendants
+                ? _indexService.IndexFrom(data.ContentLink, data.Force)
+                : _indexService.Index(data.ContentLink, data.Force);
 
             return Rest(indexingResults);
         }
     }
 
-    public class IndexInFindData
+    public class IndexInFindRequest
     {
         public ContentReference ContentLink { get; set; }
         public bool IncludeDescendants { get; set; }
