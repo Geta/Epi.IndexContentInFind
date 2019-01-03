@@ -14,10 +14,10 @@
         <copyright></copyright>
         <tags>Episerver, Geta</tags>
         <dependencies>
-            <dependency id="EPiServer.Framework" version="10.0.1" />
-            <dependency id="EPiServer.CMS.Core" version="10.0.1" />
-            <dependency id="EPiServer.CMS.UI.Core" version="10.0.2" />
-            <dependency id="EPiServer.Find.Cms" version="12.2.5" />
+            <dependency id="EPiServer.Framework" version="11.1.0" />
+            <dependency id="EPiServer.CMS.Core" version="11.1.0" />
+            <dependency id="EPiServer.CMS.UI.Core" version="11.1.0" />
+            <dependency id="EPiServer.Find.Cms" version="12.7.0" />
         </dependencies>
     </metadata>
     <files>
