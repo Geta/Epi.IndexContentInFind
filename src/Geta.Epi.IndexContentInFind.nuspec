@@ -13,6 +13,7 @@
         <releaseNotes></releaseNotes>
         <copyright></copyright>
         <tags>Episerver, Geta</tags>
+        <repository type="git" url="URL" branch="BRANCH_NAME" commit="COMMIT" />
         <dependencies>
             <dependency id="EPiServer.Framework" version="11.1.0" />
             <dependency id="EPiServer.CMS.Core" version="11.1.0" />
